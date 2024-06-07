@@ -155,29 +155,18 @@ export default function Footer() {
       <footer className={classes.footer}>
         <Container maxWidth="sm">
           <Typography variant="body1">
-            Built and developed by{" "}
+            
             <Link
-              href="https://github.com/sh-dv"
+              href=""
               target="_blank"
               rel="noopener"
               color="inherit"
             >
-              {"sh-dv"}
+            
             </Link>
           </Typography>
 
-          <Chip
-            size="small"
-            className={classes.chip}
-            avatar={
-              <Avatar src={`/assets/icons/${currAvatar}-logo.png`}></Avatar>
-            }
-            label="Donations Accepted"
-            clickable
-            onClick={() => handleClickOpen()}
-            onDelete={() => handleClickOpen()}
-            deleteIcon={<MonetizationOnIcon className={classes.monIcon} />}
-          />
+          
           <Dialog
             scroll="body"
             maxWidth="sm"
@@ -194,7 +183,7 @@ export default function Footer() {
               paperScrollBody: classes.topPaperScrollBody,
             }}
           >
-            <DialogTitle>{"Donations"}</DialogTitle>
+            <DialogTitle></DialogTitle>
 
             <DialogContent>
               <Hidden xsDown>

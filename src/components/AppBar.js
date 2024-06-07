@@ -11,6 +11,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import VersionBadge from "./VersionBadge";
 import Settings from "./Settings";
 import { getTranslations as t } from "../../locales";
+import { useSession, signIn, signOut } from "next-auth/react"
 
 const useStyles = makeStyles((theme) => ({
 
@@ -25,33 +26,32 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function NavAppBar() {
-  const classes = useStyles();
-
+  const classes = useStyles()
+  const { data: session } = useSession()
+  if (session) {
   return (
     <div>
       <AppBar color="transparent" position="static" elevation={0}>
         <Container maxWidth="lg">
           <Toolbar>
-            <Typography variant="h6" className={classes.logo}>
-              <a href="/">
-                <img src="/assets/images/logo.png" alt="logo" width="40" />
-              </a>
-              <VersionBadge />
-            </Typography>
+            
+          Signed in as {session.user.email} <br />
+        <button onClick={() => signOut()}>Sign out</button>
 
-            <Button color="inherit" href="/about/" className={classes.button}>
-              {t("about")}
-            </Button>
+          </Toolbar>
+        </Container>
+      </AppBar>
+    </div>
+  );}
+  return (
+    <div>
+      <AppBar color="transparent" position="static" elevation={0}>
+        <Container maxWidth="lg">
+          <Toolbar>
+            
+          Not signed in <br />
+      <button onClick={() => signIn()}>Sign in</button>
 
-            <IconButton
-              href="https://github.com/sh-dv/hat.sh"
-              target="_blank"
-              rel="noopener"
-            >
-              <GitHubIcon />
-            </IconButton>
-
-            <Settings />
           </Toolbar>
         </Container>
       </AppBar>

@@ -3,19 +3,15 @@ import Head from "next/head";
 import { getTranslations as t } from "../locales";
 import "../public/assets/styles/style.css";
 import { checkTheme } from "../src/config/Theme";
+import { SessionProvider } from "next-auth/react"
 
 //check wether the user prefers/chose dark theme
 checkTheme();
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps: { session, ...pageProps }, }) {
   return (
     <>
       <Head>
-        <title>
-          {"Hat.sh"}
-          {" - "}
-          {t("sub_title")}
-        </title>
         <link rel="icon" href="/favicon.ico" />
 
         <meta charSet="utf-8" />
@@ -39,8 +35,9 @@ function MyApp({ Component, pageProps }) {
           media="(prefers-color-scheme: dark)"
         />
       </Head>
-
-      <Component {...pageProps} />
+      <SessionProvider session={session}>
+        <Component {...pageProps} />
+      </SessionProvider>
     </>
   );
 }
