@@ -23,6 +23,6 @@ app.prepare().then(() => {
   }).listen(3000, (err) => {
     console.log(err, 'err')
     if (err) throw err
-    console.log('> Ready on http://localhost:3000')
+    console.log('> Ready on https://test3.ubonex.de:3000')
   })
 })
