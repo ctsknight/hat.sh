@@ -16,7 +16,7 @@ const zh_CN = {
     faq: "问与答", // FAQ
     technical_details: "技术细节", // Technical-Details
     changelog: "更新日志", // Changelog
-    donation_message: "喜欢 hat.sh 吗？您可以捐赠来支持本项目", // Love hat.sh? You can donate to support the project.
+    donation_message: "", // Love hat.sh? You can donate to support the project.
   
     // Settings
     settings: "设置", // Settings
@@ -31,7 +31,7 @@ const zh_CN = {
     reset: "重置", // Reset
     guide: "引导", // Guide
     multiple_tabs_alert: "重复打开提醒", // Multiple tabs alert
-    multiple_tabs_alert_notice_one: "Hat.sh 已经在另一标签窗口打开", // Looks like that Hat.sh is already open in another window/tab.
+    multiple_tabs_alert_notice_one: "已经在另一标签窗口打开", // Looks like that Hat.sh is already open in another window/tab.
     multiple_tabs_alert_notice_two: "避免不同标签页在同一时间进行加密解密", // Please avoid encrypting/decrypting files in different tabs at the same time.
     understand: "明白！", // I UNDERSTAND
 
@@ -68,7 +68,7 @@ const zh_CN = {
     downloading_file: "下载中", // Downloading...
     checking_file: "检查文件中", // Checking file...
     page_close_alert: "下载文件中，请勿关闭页面！", // Don't close the page while files are downloading!
-    offline_note: "文件不会上传服务器，所有操作都在您的浏览器离线运行", // Files are not uploaded to a server, everything is done offline in your browser.
+    offline_note: "", // Files are not uploaded to a server, everything is done offline in your browser.
 
     // Password Strength Check
     very_weak: "非常弱", // Very Weak (guessable)
@@ -119,8 +119,8 @@ const zh_CN = {
     choose_files_dec: "选择需要解密的文件", // Choose files to decrypt
     sender_key_loaded: "发送者公钥已载入，请选择需要解密的文件", // Sender's public key is loaded, please select the encrypted file.
     recipient_key_loaded: "接收者公钥已载入，请选择需要需要加密的文件", // Recipient's public key is loaded, please select a file to encrypt.
-    file_not_encrypted_corrupted: "该文件不是使用 hat.sh 加密的，或者文件已损坏！", // This file was not encrypted using hat.sh or the file may be corrupted!
-    old_version: "文件由老版本 hat.sh 加密，访问 v1 版本来解密", // This file was encrypted using an older version of hat.sh, you can decrypt this file by visiting the v1 app.
+    file_not_encrypted_corrupted: "该文件不是使用本产品加密的，或者文件已损坏！", // This file was not encrypted using hat.sh or the file may be corrupted!
+    old_version: "文件由老版本加密，访问 v1 版本来解密", // This file was encrypted using an older version of hat.sh, you can decrypt this file by visiting the v1 app.
     file_mixup: "“解铃还需系铃人”，文件的加密解密方法必须保持一致，请选择相匹配的文件", // Files selected for decryption have to be encrypted using the same method, either by password or public key. Choose files that match.
     enter_password_dec: "输入解密密码", // Enter the decryption password
     enter_keys_dec: "输入发送者的公钥和您的私钥", // Enter sender's Public key and your Private Key

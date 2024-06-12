@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps }, }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="Encrypt and Decrypt files securely in your browser."
+          content="Encrypt and Decrypt files securely "
         />
         <meta
           name="Keywords"
