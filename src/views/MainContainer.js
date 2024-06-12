@@ -32,8 +32,9 @@ const MainContainer = () => {
   }
   return (
     <div className={classes.body}>
+      <CheckMultipleTabs />
+      <NavAppBar />
       <Hero />
-      <Panels />
       <Footer />
     </div>
   );
