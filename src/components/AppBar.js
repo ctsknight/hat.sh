@@ -35,8 +35,8 @@ export default function NavAppBar() {
         <Container maxWidth="lg">
           <Toolbar>
             
-          Signed in as {session.user.email} <br />
-        <button onClick={() => signOut()}>Sign out</button>
+          用户名:  {session.user.name} <br />
+	  <Button className={classes.button} color="inherit" onClick={() => signOut()}>注销</Button>
 
           </Toolbar>
         </Container>
@@ -49,10 +49,10 @@ export default function NavAppBar() {
         <Container maxWidth="lg">
           <Toolbar>
             
-          Not signed in <br />
-      <button onClick={() => signIn()}>Sign in</button>
+          未登录 <br />
+      <Button className={classes.button} color="inherit" onClick={() => signIn()}>登录</Button>
 
-          </Toolbar>
+         </Toolbar>
         </Container>
       </AppBar>
     </div>
